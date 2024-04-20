@@ -13,4 +13,20 @@ class Post extends Model
         'user_id',
         'post_text'
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function like(){
+        return $this->hasMany(Like::class);
+    }
+
+    public function comment(){
+        return $this->hasMany(Comment::class);
+    }
+
+    public function post_media(){
+        return $this->hasMany(post_media::class);
+    }
 }

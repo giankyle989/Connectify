@@ -11,5 +11,10 @@ class post_media extends Model
     
     protected $fillable = [
         'post_id'
-    ]
+    ];
+
+    public function post(){
+        return $this->belongsTo(Post::class);
+    }
+
 }
